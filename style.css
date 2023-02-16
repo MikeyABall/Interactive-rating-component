@@ -1,0 +1,179 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* ---------------------------------------- */
+/* -------- Custom Properties ------------- */
+/* ---------------------------------------- */
+
+:root {
+    /* colors */
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lt-gray: hsl(217, 12%, 63%);
+    --md-gray: #7c8798;
+    --md-gray-soft: hsla(216, 12%, 54%, 0.1);
+    --blue: hsl(213, 19%, 18%);
+    --drk-blue: hsl(216, 12%, 8%);
+
+    /* typography */
+    --sans: 'Overpass', sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* Custom classes */
+    /* colors */
+.clr-orange { color: var(--orange); }
+.clr-white { color: var(--white); }
+.clr-lt-gray { color: var(--lt-gray); }
+.clr-md-gray { color: var(--md-gray); }
+.clr-blue { color: var(--blue); }
+.clr-drk-blue { color: var(--drk-blue); }
+
+.bg-orange { background-color: var(--orange); }
+.bg-white { background-color: var(--white); }
+.bg-lt-gray { background-color: var(--lt-gray); }
+.bg-md-gray { background-color: var(--md-gray); }
+.bg-blue { background-color: var(--blue); }
+.bg-drk-blue { background-color: var(--drk-blue); }
+
+    /* font-family */
+.ff-sans { font-family: var(--sans); }
+    /* font-weight */
+.fw-400 { font-weight: var(--fw-400); }
+.fw-700 { font-weight: var(--fw-700); }
+
+    /* layout */
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ---------------------------------------- */
+/* --------- General Styles --------------- */
+/* ---------------------------------------- */
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+main {
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* ------------- Rating State -------------------- */
+
+#rating-state {
+    display: block;
+}
+
+.star-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--md-gray-soft);
+}
+
+h1 {
+    padding-top: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    padding-top: 1.25rem;
+    font-size: 0.938rem;
+}
+
+.rate-btns-container {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.rating-btn {
+    border: none;
+    color: var(--lt-gray);
+    background-color: var(--md-gray-soft);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rating-btn:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: background-color 500ms ease-in-out;
+}
+
+.rating-btn:focus {
+    background-color: var(--md-gray);
+    color: var(--white);
+}
+
+.submit-container {
+    margin-top: 1.5rem;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    color: var(--orange);
+    background-color: var(--white);
+    transition: background-color 500ms ease-in-out;
+}
+
+
+/* ------------- Thank State -------------------- */
+
+#thank-state {
+    display: none;
+}
+
+.selection {
+    margin: 1.5rem 3.5rem;
+    padding: 0.5rem;
+    background-color: var(--md-gray-soft);
+    color: var(--orange);
+    border-radius: 25px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+footer {
+    padding-top: 1.5rem;
+}
+
+a:hover {
+    color: var(--white);
+}
